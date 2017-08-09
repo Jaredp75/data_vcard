@@ -1,4 +1,4 @@
-fetch('https://api.github.com/users/jaredp75')
+fetch("https://api.github.com/users/jaredp75")
   .then(
     function(response) {
       if (response.status !== 200) {
@@ -9,44 +9,34 @@ fetch('https://api.github.com/users/jaredp75')
 
       // Examine the text in the response
       response.json().then(function(data) {
-        console.log(data.results[0].title);
-        let title = data.results[0].title;
-        console.log(title);
-        console.log(`The first Star Wars movie is ${title}`);
-
-        //render characters
-
-        let characters = data.results[0].characters;
+        //console.log(data.results[0].title);
 
 
+//        let headerText = `
+//          <h1>${data.name}</h1>
+//        `
+//        let header = document.getElementById("header");
+//        header.innerHTML += headerText;
 
-        function renderCharacters(){
-          return `
-            <ul>
-              ${characters.map(character => `<li>${character}</li>`).join('')}
-            </ul>
-          `;
-        }
+        let basicsText = `
+          <ul>
+            <li><strong>Name:</strong>${data.name}</li>
+            <li><strong>GitHub URL:</strong>${data.html_url}</li>
+  	        <li><strong>Email:</strong><a href="mailto:${data.email}"> ${data.email}</a></li>
+  	        <li><strong>Company:</strong>${data.company}</li>
+  	        <li><strong>Website:</strong>${data.blog}</li>
+  	      </ul>
+  	     `
+  	     let basics = document.getElementById("basics");
+  	     basics.innerHTML += basicsText;
 
-        console.log(characters);
 
-
-      //let's set up the HTML
-      //characters as array then as li
-
-         let markup = `
-           <div class="title">
-             <p>Title: ${title}</p>
-             <p>Episode ID: ${data.results[0].episode_id}</p>
-             <ul>Characters:
-               <li>${data.results[0].characters}</li>
-             </ul>
-             ${renderCharacters(data.results.characters)}
-           </div>
-         `
-
-         document.body.innerHTML = markup;
-
-      });
-    }
-  )
+  	     let storyImage = `
+  	      <img src="${data.avatar_url}" alt="User Profile Picture">
+  	       <p>Lorem ipsum dolor sit amet, appareat definitiones in his, altera eligendi invidunt id usu. Quo cu mutat ignota liberavisse, nec ex possit possim, ius nihil omn. Lorem ipsum dolor sit amet, appareat definitiones in his, altera eligendi invidunt id usu. Quo cu mutat ignota liberavisse, nec ex possit possim, ius nihil omn. Lorem ipsum dolor sit amet, appareat definitiones in his, altera eligendi invidunt id usu. Quo cu mutat ignota liberavisse, nec ex possit possim, ius nihil omn. Lorem ipsum dolor sit amet, appareat definitiones in his, altera eligendi invidunt id usu. Quo cu mutat ignota liberavisse, nec ex possit possim, ius nihil omn.</p>
+  	     `
+  	        let story = document.getElementById("story");
+  	        story.innerHTML += storyImage;
+  	      })
+  	    }
+  	  )
