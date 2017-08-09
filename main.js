@@ -12,12 +12,6 @@ fetch("https://api.github.com/users/jaredp75")
         //console.log(data.results[0].title);
 
 
-//        let headerText = `
-//          <h1>${data.name}</h1>
-//        `
-//        let header = document.getElementById("header");
-//        header.innerHTML += headerText;
-
         let basicsText = `
           <ul>
             <li><strong>Name:</strong>${data.name}</li>

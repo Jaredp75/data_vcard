@@ -2,21 +2,21 @@
 	  margin: 10px;
 	}
 
-	h2 {
+h2 {
 	  margin-bottom: 10px;
     font-family: sans-serif;
 	}
 
-
 /*Header*/
-  .container {
+.container {
      position: relative;
      padding: 8px 8px 50px 8px;
      background: black;
      color: white;
      text-align: center;
  }
-   .container:after {
+
+.container:after {
      background: linear-gradient(-45deg, #ffffff 16px, transparent 0), linear-gradient(45deg, #ffffff 16px, transparent 0);
      background-position: left-bottom;
      background-repeat: repeat-x;
@@ -30,38 +30,33 @@
      height: 32px;
  }
 
-	#profile {
-	  margin: 0 auto;
-	  display: flex;
-	  width: 80%;
-	}
-
-	#basics {
+#basics {
 	  padding-right: 20px;
     float: left;
-	}
+}
 
-	ul {
+ul {
 	  margin: 0;
 	  padding: 0;
-	}
+}
 
-	li {
+li {
 	  list-style: none;
 	  text-align: left;
 	  font-family: sans-serif;
 	  line-height: 1.5;
-	}
+}
 
-	#story img {
+#story img {
 	  border-radius: 50%;
 	  float: right;
-	}
+}
 
-	#story p {
+#story p {
 	  display: inline;
 	  border-left: 1px solid gray;
 	  padding-left: 20px;
 	  font-family: sans-serif;
 	  line-height: 1.5;
-	}
+    text-indent: 50px;
+}
